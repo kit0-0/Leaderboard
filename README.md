@@ -31,7 +31,7 @@
 
 # 📖 About the Project <a name="about-project"></a>
 
-**Leaderboard** is a repository that aims to master all of the tools and best practices learned in previous steps.
+**Leaderboard** aims to integrate the Leaderboard API service into an application, providing functionality for creating new games, saving scores, and retrieving scores for a game.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
