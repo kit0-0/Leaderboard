@@ -1,76 +1,189 @@
-# Webpack Linters Template
 
-This is a template repository for setting up a project with Webpack and linters (ESLint and Stylelint) configured. It provides a solid foundation for building JavaScript and CSS projects while ensuring code quality and adherence to coding standards.
+<a name="readme-top"></a>
 
-## Features
+<div align="center">
+  <h1>🏆 Leaderboard</h1>
+</div>
 
-- Webpack configuration for bundling JavaScript and CSS files
-- ESLint for JavaScript linting with a recommended configuration
-- Stylelint for CSS linting with a recommended configuration
-- Pre-commit hooks to run linters before committing changes
-- Deployment script for deploying the project to GitHub Pages
+<!-- TABLE OF CONTENTS -->
 
-## Getting Started
+# 📖 Table of Contents
 
-To use this template and set up your project, follow these steps:
+- [About the Project](#about-project)
+  - [🛠️ Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [🔑 Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [💻 Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run Tests](#run-tests)
+    - [Build](#build)
+    - [Webpack Development Server](#webpack-development-server)
+  - [👤 Author](#author)
+  - [🔮 Future Features](#future-features)
+  - [🤝 Contributing](#contributing)
+  - [⭐️ Show Your Support](#show-your-support)
+  - [🙏 Acknowledgments](#acknowledgments)
+  - [📝 License](#license)
 
-1. Click on the "Use this template" button or manually clone the repository.
-2. Clone the repository to your local machine using Git.
-   ```bash
-   git clone https://github.com/kit0-0/webpacl-linters-template.git
-   ```
-3. Navigate to the project directory.
-   ```bash
-   cd webpack-linters-template
-   ```
-4. Install the dependencies.
-   ```bash
-   npm install
-   ```
-5. Start the development server.
-   ```bash
-   npm start
-   ```
-   This will compile the project and launch the development server.
-6. Begin coding your project, writing JavaScript and CSS code in the `src` directory.
+# 📖 About the Project <a name="about-project"></a>
 
-## Scripts
+**Leaderboard** is a repository that aims to master all of the tools and best practices learned in previous steps.
 
-The following scripts are available in the project:
+## 🛠️ Built With <a name="built-with"></a>
 
-- `npm start`: Starts the development server.
-- `npm run build`: Builds the project for production.
-- `npm run lint`: Runs ESLint and Stylelint to check for linting issues.
-- `npm test`: Runs the project's tests (if any).
-- `npm run deploy`: Deploys the project to GitHub Pages.
+### Tech Stack <a name="tech-stack"></a>
 
-## Configuration
+<details>
+  <summary>🖥️ Client</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+  </ul>
+</details>
 
-The project includes default configurations for ESLint and Stylelint, located in the root directory:
 
-- `.eslintrc.json`: ESLint configuration file with recommended settings.
-- `.stylelintrc.json`: Stylelint configuration file with recommended settings.
+<!-- FEATURES -->
 
-You can modify these configuration files according to your project's requirements.
+### 🔑 Key Features <a name="key-features"></a>
 
-## Pre-commit Hooks
+- ✨ **Demo of Linters**: Showcase the usage of HTML, CSS, and JavaScript linters to ensure code quality.
+- 🏅 **Demo of Leaderboard**: Implement a leaderboard feature to display and track scores or rankings.
 
-The project is configured to run the linters automatically before committing changes, ensuring that code quality and style standards are maintained. If any issues are found, the commit will be blocked until the issues are resolved.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Deploying to GitHub Pages
+<!-- LIVE DEMO -->
 
-To deploy your project to GitHub Pages, use the following script:
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [🔗 Live Demo Link](https://kit0-0.github.io/Leaderboard/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+### Prerequisites
+
+To run this project, you need the following:
+
+- 🌐 Web browser
+- 🐙 Git
+- 👨‍💻 Code editor
+
+### Setup
+
+Clone this repository to your desired folder:
 
 ```bash
-npm run deploy
+git clone https://github.com/kit0-0/Leaderboard.git
 ```
 
-This script will use `gh-pages` to deploy the contents of the `dist` directory to the `gh-pages` branch of your repository. Make sure to set up GitHub Pages for your repository before running this command.
+### Install
 
-## Contributing
+To install all dependencies, run the following command:
 
-If you have suggestions, improvements, or bug fixes, please feel free to contribute to this project. Fork the repository, make your changes, and submit a pull request with a clear description of your changes.
+```bash
+npm install
+```
 
-## License
+### Usage
 
-The project is licensed under the [MIT License](LICENSE). Feel free to use and modify the template according to your needs.
+To run the project, follow these instructions:
+
+1. Clone this repository to your local machine.
+
+### Run Tests
+
+To run tests, use the following commands:
+
+- To track HTML linter errors, run:
+```bash
+npx hint .
+```
+- To track CSS linter errors, run:
+```bash
+npx stylelint "**/*.{css,scss}"
+```
+- To track JavaScript l
+
+inter errors, run:
+```bash
+npx eslint .
+```
+
+### Build
+
+To build the project, run the following command:
+
+```bash
+npm run build
+```
+
+### Webpack Development Server
+
+To run the webpack development server, execute the following command:
+
+```bash
+npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHOR -->
+
+## 👤 Author <a name="author"></a>
+
+👤 Kiko
+
+- GitHub: [@kit0-0](https://github.com/kit0-0)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔮 Future Features <a name="future-features"></a>
+
+- [📱]  **Mobile Version**
+- [📝] **Add Model**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/kit0-0/Leaderboard/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SHOW YOUR SUPPORT -->
+
+## ⭐️ Show Your Support <a name="show-your-support"></a>
+
+If you like this project, give it a ⭐️.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgments"></a>
+
+I would like to thank Microverse.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is licensed under the [MIT License](./LICENSE).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
