@@ -80,6 +80,7 @@ section {
   flex-basis: 60%;
   padding-right: 1rem;
   border: 1px solid black;
+  margin-left: 10px;
 }
 
 .home .flex form,
@@ -149,7 +150,6 @@ section {
 
 #scores-container li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-size: 1.8rem;
   padding: 1rem 0;
