@@ -1,22 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
 :root {
-  --primary: #ddd;
-  --secondary: #e5d4d4;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--primary);
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  --main-color: #ff0;
+  --light-white: rgba(255, 255, 255, 0.5);
+  --light-black: rgba(0, 0, 0, 0.3);
+  --light-bg: rgba(255, 255, 255, 0.1);
+  --white: #fff;
+  --black: #000;
 }
 
 * {
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 63%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: var(--black);
+}
+
+body {
+  background-color: var(--black);
+}
+
+.container {
+  padding-top: 10rem;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, transparent, var(--black));
+  z-index: 1000;
+}
+
+.header .flex {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header .flex .logo {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+.header .flex nav a {
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: var(--light-white);
+  transition: 0.2s linear;
+}
+
+.header .flex nav a:hover {
+  color: var(--white);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+}
+
+.home {
+  background: no-repeat rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.home .flex {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.score-section {
+  flex-basis: 60%;
+  padding-right: 1rem;
+}
+
+.home .flex form,
+.home .flex .score-section {
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  backdrop-filter: blur(0.4rem);
+}
+
+.home .flex .score-section {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.home .flex form h3,
+.score-section h2 {
+  font-size: 2.5rem;
+  color: var(--white);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+#scores-container {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.home .flex form p {
+  padding-top: 1rem;
+  font-size: 1.7rem;
+  color: var(--light-white);
+}
+
+.submit-section {
+  flex-basis: 40%;
+  padding-left: 1rem;
+}
+
+.home .flex form input {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: var(--white);
+  text-transform: none;
+  background: var(--light-black);
+  margin: 1rem 0;
+}
+
+.home .flex form input::placeholder {
+  color: var(--light-white);
+}
+
+.btn {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1.2rem 3rem;
+  background: var(--main-color);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  transition: 0.2s linear;
+}
+
+.score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+#scores-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+#scores-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light-white);
+}
+
+#scores-container li:last-child {
+  border-bottom: none;
+}
+
+#scores-container li span:first-child {
+  font-weight: bold;
+}
+
+#scores-container li span:last-child {
+  color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .home .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .score-section,
+  .submit-section {
+    flex-basis: auto;
+  }
+
+  .home .flex form,
+  .home .flex .score-section {
+    width: 100%;
+  }
+
+  .header .flex #menu-btn {
+    display: block;
+  }
 }
