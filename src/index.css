@@ -191,7 +191,7 @@ section {
 }
 
 #scores-container p {
-  padding-top: 1rem;
+  padding: 1rem;
   font-size: 1.7rem;
   color: var(--white);
 }
