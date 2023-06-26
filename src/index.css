@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
+:root {
+  --main-color: #ff0;
+  --light-white: rgba(255, 255, 255, 0.5);
+  --light-black: rgba(0, 0, 0, 0.3);
+  --light-bg: rgba(255, 255, 255, 0.1);
+  --white: #fff;
+  --black: #000;
+}
+
 * {
   font-family: "Comfortaa", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
   text-decoration: none;
   text-transform: capitalize;
 }
@@ -16,9 +27,13 @@ html {
   scroll-padding-top: 5rem;
 }
 
+*::selection {
+  background-color: var(--main-color);
+  color: var(--black);
+}
+
 body {
-  background-color: white;
-  color: #000;
+  background-color: var(--black);
 }
 
 .container {
@@ -36,6 +51,8 @@ section {
   top: 0;
   left: 0;
   right: 0;
+  background: linear-gradient(0deg, transparent, var(--black));
+  z-index: 1000;
 }
 
 .header .flex {
@@ -48,21 +65,29 @@ section {
 
 .header .flex .logo {
   font-size: 2.5rem;
+  color: var(--main-color);
 }
 
 .header .flex nav a {
   margin-left: 2rem;
   font-size: 1.8rem;
+  color: var(--light-white);
   transition: 0.2s linear;
+}
+
+.header .flex nav a:hover {
+  color: var(--white);
 }
 
 #menu-btn {
   font-size: 2.5rem;
   cursor: pointer;
+  color: var(--white);
   display: none;
 }
 
 .home {
+  background: no-repeat url('./asset/home-bg.jpg') rgba(0, 0, 0, 0.5);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -79,14 +104,15 @@ section {
 .score-section {
   flex-basis: 60%;
   padding-right: 1rem;
-  border: 1px solid black;
   margin-left: 10px;
 }
 
 .home .flex form,
 .home .flex .score-section {
+  background-color: var(--light-bg);
   border-radius: 0.5rem;
   padding: 2rem;
+  backdrop-filter: blur(0.4rem);
 }
 
 .home .flex .score-section {
@@ -97,6 +123,7 @@ section {
 .home .flex form h3,
 .score-section h2 {
   font-size: 2.5rem;
+  color: var(--white);
   padding-bottom: 1rem;
   text-align: center;
 }
@@ -104,11 +131,14 @@ section {
 #scores-container {
   max-height: 100%;
   overflow-y: auto;
+  margin-top: 10px;
+  background-color: #1b1616;
 }
 
 .home .flex form p {
   padding-top: 1rem;
   font-size: 1.7rem;
+  color: var(--light-white);
 }
 
 .submit-section {
@@ -121,15 +151,22 @@ section {
   border-radius: 0.5rem;
   padding: 1.4rem;
   font-size: 1.8rem;
+  color: var(--white);
   text-transform: none;
   background: var(--light-black);
   margin: 1rem 0;
+}
+
+.home .flex form input::placeholder {
+  color: var(--light-white);
 }
 
 .btn {
   display: block;
   border-radius: 0.5rem;
   padding: 1.2rem 3rem;
+  background: var(--main-color);
+  color: var(--black);
   cursor: pointer;
   text-align: center;
   font-size: 1.8rem;
@@ -143,18 +180,29 @@ section {
   align-items: center;
 }
 
+.btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
 #scores-container ul {
   list-style: none;
   padding: 0;
 }
 
+#scores-container p {
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: var(--white);
+}
+
 #scores-container li {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.8rem;
   padding: 1rem 0;
-  border-bottom: 1px solid grey;
-  justify-content: space-around;
+  border-bottom: 1px solid var(--light-white);
 }
 
 #scores-container li:last-child {
@@ -163,4 +211,30 @@ section {
 
 #scores-container li span:first-child {
   font-weight: bold;
+  color: var(--white);
+}
+
+#scores-container li span:last-child {
+  color: var(--main-color);
+}
+
+@media (max-width: 645px) {
+  .home .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .score-section,
+  .submit-section {
+    flex-basis: auto;
+  }
+
+  .home .flex form,
+  .home .flex .score-section {
+    width: 100%;
+  }
+
+  .header .flex #menu-btn {
+    display: block;
+  }
 }
