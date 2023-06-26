@@ -1,22 +1,165 @@
-:root {
-  --primary: #ddd;
-  --secondary: #e5d4d4;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--primary);
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
 * {
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 63%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: white;
+  color: #000;
+}
+
+.container {
+  padding-top: 10rem;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .flex {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header .flex .logo {
+  font-size: 2.5rem;
+}
+
+.header .flex nav a {
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  transition: 0.2s linear;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.home .flex {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.score-section {
+  flex-basis: 60%;
+  padding-right: 1rem;
+  border: 1px solid black;
+  margin-left: 10px;
+}
+
+.home .flex form,
+.home .flex .score-section {
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.home .flex .score-section {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.home .flex form h3,
+.score-section h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+#scores-container {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.home .flex form p {
+  padding-top: 1rem;
+  font-size: 1.7rem;
+}
+
+.submit-section {
+  flex-basis: 40%;
+  padding-left: 1rem;
+}
+
+.home .flex form input {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  text-transform: none;
+  background: var(--light-black);
+  margin: 1rem 0;
+}
+
+.btn {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  transition: 0.2s linear;
+}
+
+.score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#scores-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+#scores-container li {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid grey;
+}
+
+#scores-container li:last-child {
+  border-bottom: none;
+}
+
+#scores-container li span:first-child {
+  font-weight: bold;
 }

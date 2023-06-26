@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>hi</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <title>LeaderBoard</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="flex">
+        <a href="#" class="logo">LeaderBoard</a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </nav>
+    </header>
+
+    <main class="container home">
+      <div class="flex">
+        <section class="score-section">
+          <div class="score-header">
+            <h2>Scores</h2>
+            <button id="refresh-button" class="refresh-button btn">
+              Refresh
+            </button>
+          </div>
+          <div id="scores-container">
+            <ul>
+              <li><span>player name</span><span>:100</span></li>
+              <li><span>player name</span><span>:20</span></li>
+              <li><span>player name</span><span>:30</span></li>
+              <li><span>player name</span><span>:100</span></li>
+              <li><span>player name</span><span>:20</span></li>
+              <li><span>player name</span><span>:30</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="submit-section">
+          <form method="post">
+            <h3>Submit Score</h3>
+            <p>Player Name</p>
+            <input
+              type="text"
+              name="Player"
+              required
+              maxlength="50"
+              placeholder="Enter name here"
+              class="box"
+            />
+            <p>Scores</p>
+            <input
+              type="number"
+              name="score"
+              min="1"
+              maxlength="7"
+              placeholder="Enter scores here"
+              required
+              class="box"
+            />
+            <button type="submit" class="btn">Add scores</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
